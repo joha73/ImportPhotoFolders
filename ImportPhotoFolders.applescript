@@ -4,10 +4,11 @@ on run
 	tell application "Photos"
 		activate
 		delay 2
+		set destinationFolder to folder "Ereignisse"
 	end tell
 
 	repeat with baseFolder in folderList
-		importEachSubFolder(baseFolder, null)
+		importEachSubFolder(baseFolder, destinationFolder)
 	end repeat
 end run
 
